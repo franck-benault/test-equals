@@ -1,40 +1,33 @@
 package net.franckbenault.testequals.v3;
 
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import org.junit.Test;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
-import nl.jqno.equalsverifier.Warning;
 
 public class PointTest {
 
 	
-	/*@Test
+	@Test
 	public void whats_the_problem() {
+		//trivial subclass mockito hibernate use trivial subclasses
 		Point point = new Point(1,2);
-		Set<Point> set = new HashSet<Point>();
-		set.add(point);
-		
-		point.setX(2);
+		Point sub = new Point(1,2) {};
 		
 	
-		assertTrue("I cannot find the point in the set",set.contains(point));
+		assertEquals(point,sub);
 		
 		
-	}*/
+	}
 	
 	@Test
 	public void testEqualsPoint() {
-		//issue with the rule 4 consistency
+		
 		EqualsVerifier.forClass(Point.class)
-		//.suppress(Warning.NONFINAL_FIELDS)
+		//.usingGetClass()
 		.verify();
 		
 	}

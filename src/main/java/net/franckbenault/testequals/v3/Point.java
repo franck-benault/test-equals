@@ -1,6 +1,6 @@
 package net.franckbenault.testequals.v3;
 
-public final class Point {
+public class Point {
 	
 	
 	final private int x;
@@ -9,8 +9,7 @@ public final class Point {
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
-	}
-	
+	}	
 
 
 
@@ -22,8 +21,6 @@ public final class Point {
 		result = prime * result + y;
 		return result;
 	}
-
-
 
 
 	@Override
@@ -41,6 +38,14 @@ public final class Point {
 			return false;
 		return true;
 	}
+
+
+
+
+
+
+
+
 
 
 
