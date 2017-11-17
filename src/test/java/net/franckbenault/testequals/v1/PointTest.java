@@ -13,14 +13,14 @@ public class PointTest {
 
 	
 	@Test
-	public void what_the_problem() {
+	public void whats_the_problem() {
 		Point point = new Point(1,2);
 		Point clone = new Point(1,2);
 		
 		List<Point> list = Arrays.asList(point);
 		
 		assertTrue(point.equals(clone));
-		assertTrue("????",list.contains(clone));
+		assertTrue("I cannot find the clone object in the list",list.contains(clone));
 		
 		
 	}

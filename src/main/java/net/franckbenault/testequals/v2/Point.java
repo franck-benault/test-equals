@@ -1,4 +1,4 @@
-package net.franckbenault.testequals.v1;
+package net.franckbenault.testequals.v2;
 
 public final class Point {
 	
@@ -22,12 +22,14 @@ public final class Point {
 	}
 
 
-	public boolean equals(Point obj) {
-		if (getClass() != obj.getClass())
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Point))
 			return false;
 	
+		Point other = (Point) obj;
 		
-		return (x == obj.x) && (y == obj.y);
+		return (x == other.x) && (y == other.y);
 		
 		
 	}
@@ -37,8 +39,22 @@ public final class Point {
 	public String toString() {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
-	
-	
-	
+
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
 
 }
