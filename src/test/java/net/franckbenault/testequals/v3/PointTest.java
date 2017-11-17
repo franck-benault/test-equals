@@ -1,19 +1,22 @@
-package net.franckbenault.testequals.v2;
+package net.franckbenault.testequals.v3;
 
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.junit.Test;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
 
 public class PointTest {
 
 	
-	@Test
+	/*@Test
 	public void whats_the_problem() {
 		Point point = new Point(1,2);
 		Set<Point> set = new HashSet<Point>();
@@ -25,7 +28,7 @@ public class PointTest {
 		assertTrue("I cannot find the point in the set",set.contains(point));
 		
 		
-	}
+	}*/
 	
 	@Test
 	public void testEqualsPoint() {
