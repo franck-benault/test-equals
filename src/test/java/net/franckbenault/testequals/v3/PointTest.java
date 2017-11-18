@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
 
 public class PointTest {
 
@@ -28,6 +29,7 @@ public class PointTest {
 		
 		EqualsVerifier.forClass(Point.class)
 		//.usingGetClass()
+		.suppress(Warning.STRICT_INHERITANCE)
 		.verify();
 		
 	}
