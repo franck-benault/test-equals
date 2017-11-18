@@ -29,7 +29,7 @@ public class PointTest {
 		
 		EqualsVerifier.forClass(Point.class)
 		//.usingGetClass()
-		.suppress(Warning.STRICT_INHERITANCE)
+		//.suppress(Warning.STRICT_INHERITANCE)
 		.verify();
 		
 	}
